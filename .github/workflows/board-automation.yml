@@ -5,6 +5,11 @@ on:
     types: [closed]
     branches: [develop, main]
 
+permissions:
+  contents: read
+  issues: write
+  pull-requests: read
+
 jobs:
   on_merge:
     if: github.event.pull_request.merged == true
